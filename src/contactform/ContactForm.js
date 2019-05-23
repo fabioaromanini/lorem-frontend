@@ -31,7 +31,7 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="ContactForm">
+      <div className="ContactForm" id="contact">
         <div className="ContactForm-header">
           <h1>Contato</h1>
         </div>

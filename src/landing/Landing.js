@@ -1,11 +1,20 @@
 import React from 'react';
+
 import './Landing.css';
+import arrow_down from './arrow_down.png';
 
 function Landing() {
   return (
     <header className="Landing-header">
-      {/* <img src={logo} className="Landing-logo" alt="logo" /> */}
-      <p>Lorem.</p>
+      <div className="Landing-hero">Lorem.</div>
+      <a href="#contact">
+        <img
+          className="animated infinite flash slower"
+          src={arrow_down}
+          alt="arrow down"
+          id="Landing-scroll"
+        />
+      </a>
     </header>
   );
 }

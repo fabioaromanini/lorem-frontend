@@ -3,12 +3,20 @@
   pointer-events: none;
 }
 
+#Landing-scroll {
+  height: 5vh;
+  width: auto;
+}
+
+.Landing-hero {
+  margin-bottom: 45vh;
+}
+
 .Landing-header {
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
 }
