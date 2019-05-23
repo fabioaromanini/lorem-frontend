@@ -33,12 +33,12 @@ class ContactForm extends React.Component {
     return (
       <div className="ContactForm" id="contact">
         <div className="ContactForm-header">
-          <h1>Contato</h1>
+          <h1>contact</h1>
         </div>
         <form onSubmit={this.handleSubmit}>
           <div className="ContactForm-body">
             <label>
-              Email
+              email
               <input
                 type="text"
                 value={this.state.email}
@@ -46,7 +46,7 @@ class ContactForm extends React.Component {
               />
             </label>
             <label>
-              Name
+              name
               <input
                 type="text"
                 value={this.state.name}
@@ -54,7 +54,7 @@ class ContactForm extends React.Component {
               />
             </label>
             <label>
-              Message
+              message
               <input
                 type="text"
                 value={this.state.message}
@@ -63,7 +63,7 @@ class ContactForm extends React.Component {
             </label>
             <input
               type="submit"
-              value="Submit"
+              value="submit"
               className="ContactForm-button"
             />
           </div>

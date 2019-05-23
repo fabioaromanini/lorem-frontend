@@ -6,7 +6,7 @@ import arrow_down from './arrow_down.png';
 function Landing() {
   return (
     <header className="Landing-header">
-      <div className="Landing-hero">Lorem.</div>
+      <div className="Landing-hero">lorem.</div>
       <a href="#contact">
         <img
           className="animated infinite flash slower"
