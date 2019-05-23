@@ -38,7 +38,7 @@ class ContactForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="ContactForm-body">
             <label>
-              Email:
+              Email
               <input
                 type="text"
                 value={this.state.email}
@@ -46,16 +46,15 @@ class ContactForm extends React.Component {
               />
             </label>
             <label>
-              Name:
+              Name
               <input
                 type="text"
                 value={this.state.name}
                 onChange={this.handleNameChange}
               />
             </label>
-
             <label>
-              Message:
+              Message
               <input
                 type="text"
                 value={this.state.message}
@@ -75,7 +74,7 @@ class ContactForm extends React.Component {
             target="_blank"
             href="https://github.com/fabioaromanini/lorem-landing-frontend"
           >
-            github
+            <h3>github</h3>
           </a>
         </div>
       </div>
