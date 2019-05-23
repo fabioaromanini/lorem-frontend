@@ -33,7 +33,7 @@ class ContactForm extends React.Component {
     return (
       <div className="ContactForm">
         <div className="ContactForm-header">
-          <h1>Formulário de contato</h1>
+          <h1>Contato</h1>
         </div>
         <form onSubmit={this.handleSubmit}>
           <div className="ContactForm-body">
@@ -69,6 +69,15 @@ class ContactForm extends React.Component {
             />
           </div>
         </form>
+        <div className="ContactForm-footer">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/fabioaromanini/lorem-landing-frontend"
+          >
+            github
+          </a>
+        </div>
       </div>
     );
   }
