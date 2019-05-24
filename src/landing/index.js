@@ -3,7 +3,7 @@ import React from 'react';
 import './Landing.css';
 import arrow_down from './arrow_down.png';
 
-function Landing() {
+export default function Landing() {
   return (
     <div className="Landing">
       <header>
@@ -22,5 +22,3 @@ function Landing() {
     </div>
   );
 }
-
-export default Landing;

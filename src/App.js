@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Landing from './landing/Landing';
-import ContactForm from './contact';
+import Landing from './landing';
+import Contact from './contact';
 
 import './App.css';
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <React.Fragment>
       <Landing />
-      <ContactForm />
+      <Contact />
     </React.Fragment>
   );
 }
