@@ -43,6 +43,7 @@ class ContactForm extends React.Component {
                     type="email"
                     value={this.state.email}
                     onChange={this.handleChange('email')}
+                    className="custom-input"
                   />
                 </Form.Group>
               </Col>
@@ -53,6 +54,7 @@ class ContactForm extends React.Component {
                     type="text"
                     value={this.state.name}
                     onChange={this.handleChange('name')}
+                    className="custom-input"
                   />
                 </Form.Group>
               </Col>
@@ -65,13 +67,16 @@ class ContactForm extends React.Component {
                     as="textarea"
                     value={this.state.message}
                     onChange={this.handleChange('message')}
+                    className="custom-input"
                   />
                 </Form.Group>
               </Col>
             </Row>
             <Row>
               <Col>
-                <Button type="submit">Submit</Button>
+                <Button variant="flat" type="submit">
+                  Submit
+                </Button>
               </Col>
             </Row>
           </Form>

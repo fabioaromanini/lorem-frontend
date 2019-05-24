@@ -1,7 +1,5 @@
 .Landing {
   min-height: 100vh;
-  background-color: #c0c5ce;
-  color: #343d46;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

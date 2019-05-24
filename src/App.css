@@ -1,0 +1,23 @@
+.btn-flat {
+  color: #343d46;
+  background-color: #c0c5ce;
+}
+
+.btn-flat:hover {
+  background-color: #65737e;
+  color: #c0c5ce;
+}
+
+.custom-input {
+  color: #343d46;
+  background-color: #c0c5ce;
+}
+
+body {
+  color: #343d46;
+  background-color: #c0c5ce;
+}
+
+html {
+  scroll-behavior: smooth;
+}
