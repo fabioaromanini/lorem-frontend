@@ -12,16 +12,8 @@ class ContactForm extends React.Component {
     };
   }
 
-  handleEmailChange = event => {
-    this.setState({ email: event.target.value });
-  };
-
-  handleNameChange = event => {
-    this.setState({ name: event.target.value });
-  };
-
-  handleMessageChange = event => {
-    this.setState({ message: event.target.value });
+  handleChange = key => event => {
+    this.setState({ [key]: event.target.value });
   };
 
   handleSubmit = event => {
@@ -42,7 +34,7 @@ class ContactForm extends React.Component {
               <input
                 type="text"
                 value={this.state.email}
-                onChange={this.handleEmailChange}
+                onChange={this.handleChange('email')}
               />
             </label>
             <label>
@@ -50,7 +42,7 @@ class ContactForm extends React.Component {
               <input
                 type="text"
                 value={this.state.name}
-                onChange={this.handleNameChange}
+                onChange={this.handleChange('name')}
               />
             </label>
             <label>
@@ -58,7 +50,7 @@ class ContactForm extends React.Component {
               <input
                 type="text"
                 value={this.state.message}
-                onChange={this.handleMessageChange}
+                onChange={this.handleChange('message')}
               />
             </label>
             <input
