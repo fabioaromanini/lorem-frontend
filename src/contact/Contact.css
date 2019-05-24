@@ -1,0 +1,29 @@
+.Contact {
+  background-color: #343d46;
+  color: #c0c5ce;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Contact > h1 {
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+.Contact-footer {
+  text-align: center;
+  background-color: #c0c5ce;
+  color: #343d46;
+  width: 100%;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.Contact-footer > a {
+  color: #343d46;
+  text-decoration: underline;
+}
