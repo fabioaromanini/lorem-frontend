@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Landing from './landing/Landing';
-import ContactForm from './contactform/ContactForm';
+import ContactForm from './contact';
 
 import './App.css';
 
