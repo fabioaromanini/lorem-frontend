@@ -12,7 +12,7 @@ export default () => {
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="https://github.com/fabioaromanini/lorem-landing-frontend"
+          href="https://github.com/fabioaromanini/lorem-frontend"
         >
           <p>github</p>
         </a>
