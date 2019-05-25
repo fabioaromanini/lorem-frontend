@@ -1,6 +1,6 @@
-# lorem landing frontend
+# lorem frontend
 
-[![Build Status](https://travis-ci.org/fabioaromanini/lorem-landing-frontend.svg?branch=master)](https://travis-ci.org/fabioaromanini/lorem-landing-frontend)
+[![Build Status](https://travis-ci.org/fabioaromanini/lorem-frontend.svg?branch=master)](https://travis-ci.org/fabioaromanini/lorem-frontend)
 
 https://lorem.fabioaromanini.com
 
