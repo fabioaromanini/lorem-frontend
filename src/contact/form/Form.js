@@ -64,7 +64,7 @@ export default props => {
                 Submit
               </div>
               <div style={{ display: submitSucceeded ? 'inline' : 'none' }}>
-                Submitted
+                Thank you!
               </div>
               <Spinner
                 style={{ display: submitting ? 'inherit' : 'none' }}
@@ -79,13 +79,13 @@ export default props => {
               className="Form-message"
               style={{ display: submitSucceeded ? 'inline' : 'none' }}
             >
-              Thank you for the cooperation!
+              Form submitted.
             </div>
             <div
               className="Form-message"
               style={{ display: submitFailed ? 'inline' : 'none' }}
             >
-              Submission Failed. Please try again.
+              Submission failed, please try again.
             </div>
           </Col>
         </Row>
