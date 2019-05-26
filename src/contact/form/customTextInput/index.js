@@ -5,6 +5,7 @@ import './CustomTextInput.css';
 
 export default props => {
   const { as, type, input, placeholder } = props;
+  console.log(props);
 
   return (
     <Form.Control

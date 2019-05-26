@@ -4,20 +4,18 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
 import { Field } from 'redux-form';
+
 import CustomTextInput from './customTextInput';
+import './Form.css';
 
 export default props => {
-  const { handleSubmit } = props;
-
-  const onSubmit = async data => {
-    handleSubmit(data);
-  };
+  const { handleSubmit, submitting, submitSucceeded } = props;
+  console.log(props);
 
   return (
     <Container>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Row>
           <Col xs={12} md={6}>
             <Form.Group controlId="MyFormEmail">
@@ -41,10 +39,20 @@ export default props => {
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Button variant="flat" type="submit">
+          <Col xs={12}>
+            <Button
+              variant="flat"
+              disabled={submitting || submitSucceeded}
+              type="submit"
+            >
               Submit
             </Button>
+            <div
+              id="Form-success-message"
+              style={{ display: submitSucceeded ? 'inline-block' : 'none' }}
+            >
+              <p>Thanks for the feedback!</p>
+            </div>
           </Col>
         </Row>
       </Form>
