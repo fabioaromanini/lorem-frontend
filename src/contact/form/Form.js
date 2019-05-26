@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 import { Field } from 'redux-form';
 import CustomTextInput from './customTextInput';
 
-const myForm = props => {
+export default props => {
   const { handleSubmit } = props;
 
   const onSubmit = async data => {
@@ -51,5 +51,3 @@ const myForm = props => {
     </Container>
   );
 };
-
-export default myForm;
