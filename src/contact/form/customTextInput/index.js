@@ -10,7 +10,8 @@ export default props => {
     input,
     placeholder,
     meta: { touched, error },
-    label
+    label,
+    disabled
   } = props;
 
   return (
@@ -22,6 +23,7 @@ export default props => {
         className="CustomTextInput"
         as={as}
         {...input}
+        disabled={disabled}
       />
       <span style={{ fontWeight: 'bold' }}>{touched && error}</span>
     </Form.Group>

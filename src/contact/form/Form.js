@@ -23,6 +23,7 @@ export default props => {
               name="email"
               label="Email"
               component={CustomTextInput}
+              disabled={submitSucceeded}
               type="text"
             />
           </Col>
@@ -30,6 +31,7 @@ export default props => {
             <Field
               name="name"
               label="Name"
+              disabled={submitSucceeded}
               component={CustomTextInput}
               type="text"
             />
@@ -42,6 +44,7 @@ export default props => {
               label="Message *"
               component={CustomTextInput}
               as="textarea"
+              disabled={submitSucceeded}
               validate={notEmpty}
             />
           </Col>
