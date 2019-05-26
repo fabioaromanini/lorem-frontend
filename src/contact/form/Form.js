@@ -8,6 +8,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import { Field } from 'redux-form';
 
 import CustomTextInput from './customTextInput';
+import { notEmpty } from './validations';
 import './Form.css';
 
 export default props => {
@@ -18,24 +19,31 @@ export default props => {
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col xs={12} md={6}>
-            <Form.Group controlId="MyFormEmail">
-              <Form.Label>Email</Form.Label>
-              <Field name="email" component={CustomTextInput} type="email" />
-            </Form.Group>
+            <Field
+              name="email"
+              label="Email"
+              component={CustomTextInput}
+              type="text"
+            />
           </Col>
           <Col xs={12} md={6}>
-            <Form.Group controlId="MyFormName">
-              <Form.Label>Name</Form.Label>
-              <Field name="name" component={CustomTextInput} type="text" />
-            </Form.Group>
+            <Field
+              name="name"
+              label="Name"
+              component={CustomTextInput}
+              type="text"
+            />
           </Col>
         </Row>
         <Row>
           <Col>
-            <Form.Group controlId="MyFormMessage">
-              <Form.Label>Message</Form.Label>
-              <Field name="message" component={CustomTextInput} as="textarea" />
-            </Form.Group>
+            <Field
+              name="message"
+              label="Message *"
+              component={CustomTextInput}
+              as="textarea"
+              validate={notEmpty}
+            />
           </Col>
         </Row>
         <Row>

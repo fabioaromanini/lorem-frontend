@@ -4,16 +4,26 @@ import Form from 'react-bootstrap/Form';
 import './CustomTextInput.css';
 
 export default props => {
-  const { as, type, input, placeholder } = props;
+  const {
+    as,
+    type,
+    input,
+    placeholder,
+    meta: { touched, error },
+    label
+  } = props;
 
   return (
-    <Form.Control
-      type={type}
-      placeholder={placeholder}
-      className="CustomTextInput"
-      value={input.value}
-      onChange={input.onChange}
-      as={as}
-    />
+    <Form.Group controlId={`Contact-${label}-input`}>
+      <Form.Label>{label}</Form.Label>
+      <Form.Control
+        type={type}
+        placeholder={placeholder}
+        className="CustomTextInput"
+        as={as}
+        {...input}
+      />
+      <span style={{ fontWeight: 'bold' }}>{touched && error}</span>
+    </Form.Group>
   );
 };
