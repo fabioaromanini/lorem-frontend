@@ -7,8 +7,8 @@ const reduxFormWrapper = reduxForm({
   form: 'contact'
 });
 
-const ReduxForm = reduxFormWrapper(Form);
+const WrappedForm = reduxFormWrapper(Form);
 
 export default () => {
-  return <ReduxForm onSubmit={data => console.log(data)} />;
+  return <WrappedForm onSubmit={data => console.log(data)} />;
 };

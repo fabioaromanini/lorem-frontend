@@ -6,25 +6,29 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
 import { Field } from 'redux-form';
-import CustomField from './CustomField';
-
-import './Form.css';
+import CustomTextInput from './customTextInput';
 
 const myForm = props => {
+  const { handleSubmit } = props;
+
+  const onSubmit = async data => {
+    handleSubmit(data);
+  };
+
   return (
     <Container>
-      <Form onSubmit={props.handleSubmit}>
+      <Form onSubmit={onSubmit}>
         <Row>
           <Col xs={12} md={6}>
             <Form.Group controlId="MyFormEmail">
               <Form.Label>Email</Form.Label>
-              <Field name="email" component={CustomField} type="email" />
+              <Field name="email" component={CustomTextInput} type="email" />
             </Form.Group>
           </Col>
           <Col xs={12} md={6}>
             <Form.Group controlId="MyFormName">
               <Form.Label>Name</Form.Label>
-              <Field name="name" component={CustomField} type="text" />
+              <Field name="name" component={CustomTextInput} type="text" />
             </Form.Group>
           </Col>
         </Row>
@@ -32,7 +36,7 @@ const myForm = props => {
           <Col>
             <Form.Group controlId="MyFormMessage">
               <Form.Label>Message</Form.Label>
-              <Field component={CustomField} name="message" as="textarea" />
+              <Field name="message" component={CustomTextInput} as="textarea" />
             </Form.Group>
           </Col>
         </Row>
