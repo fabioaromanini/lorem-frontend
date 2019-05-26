@@ -1,4 +1,4 @@
-#Form-success-message {
+.Form-message {
   display: inline-block;
-  margin-left: 1em;
+  margin-left: 0.7em;
 }

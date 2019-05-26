@@ -4,14 +4,14 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Spinner from 'react-bootstrap/Spinner';
 import { Field } from 'redux-form';
 
 import CustomTextInput from './customTextInput';
 import './Form.css';
 
 export default props => {
-  const { handleSubmit, submitting, submitSucceeded } = props;
-  console.log(props);
+  const { handleSubmit, submitting, submitSucceeded, submitFailed } = props;
 
   return (
     <Container>
@@ -39,19 +39,42 @@ export default props => {
           </Col>
         </Row>
         <Row>
-          <Col xs={12}>
+          <Col xs>
             <Button
               variant="flat"
               disabled={submitting || submitSucceeded}
               type="submit"
             >
-              Submit
+              <div
+                style={{
+                  display: !submitting && !submitSucceeded ? 'inline' : 'none'
+                }}
+              >
+                Submit
+              </div>
+              <div style={{ display: submitSucceeded ? 'inline' : 'none' }}>
+                Submitted
+              </div>
+              <Spinner
+                style={{ display: submitting ? 'inherit' : 'none' }}
+                size="sm"
+                animation="border"
+                role="status"
+              >
+                <span className="sr-only">Loading...</span>
+              </Spinner>
             </Button>
             <div
-              id="Form-success-message"
-              style={{ display: submitSucceeded ? 'inline-block' : 'none' }}
+              className="Form-message"
+              style={{ display: submitSucceeded ? 'inline' : 'none' }}
             >
-              <p>Thanks for the feedback!</p>
+              Thank you for the cooperation!
+            </div>
+            <div
+              className="Form-message"
+              style={{ display: submitFailed ? 'inline' : 'none' }}
+            >
+              Submission Failed. Please try again.
             </div>
           </Col>
         </Row>
