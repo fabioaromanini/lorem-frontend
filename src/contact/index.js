@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Form from './Form';
+import Form from './form';
+import Footer from './footer';
 import './Contact.css';
 
 export default () => {
@@ -8,15 +9,7 @@ export default () => {
     <div className="Contact" id="contact">
       <h1>Contact</h1>
       <Form />
-      <footer className="Contact-footer">
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://github.com/fabioaromanini/lorem-frontend"
-        >
-          <p>github</p>
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 };
