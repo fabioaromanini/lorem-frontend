@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Form from './Form';
-import Footer from './Footer';
+import Form from './form';
+import Footer from './footer';
 import './Contact.css';
 
 export default () => {
