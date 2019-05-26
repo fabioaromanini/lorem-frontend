@@ -14,7 +14,7 @@ const mapStateToProps = ({ contactForm }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSubmitForm: () => dispatch(actions.submitForm())
+    onSubmitForm: form => dispatch(actions.submitForm(form))
   };
 };
 

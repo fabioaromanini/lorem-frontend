@@ -7,12 +7,6 @@ import Container from 'react-bootstrap/Container';
 
 import './Form.css';
 
-// TODO: Use redux-form
-import axios from 'axios';
-const { REACT_APP_BACKEND_URL } = process.env;
-const gambiara = data => axios.post(`${REACT_APP_BACKEND_URL}/email`, data);
-// END OF WORKAROUNDS
-
 const myForm = props => {
   const handleChange = key => event => {
     console.log(props);
@@ -20,8 +14,10 @@ const myForm = props => {
 
   const handleSubmit = async event => {
     event.preventDefault();
+    const { email, name, message } = props;
+
     try {
-      const response = await props.onSubmitForm();
+      const response = await props.onSubmitForm({ email, name, message });
       console.log(response);
     } catch (e) {
       console.log(e);
