@@ -1,0 +1,28 @@
+.Footer {
+  background-color: #c0c5ce;
+  color: #343d46;
+  width: 100%;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.Footer-banner {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.Footer-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Footer-links > a,
+.Footer-banner > a {
+  color: #343d46;
+  text-decoration: underline;
+}
+
+#Footer-heart {
+  color: #65737e;
+  display: inline;
+}
