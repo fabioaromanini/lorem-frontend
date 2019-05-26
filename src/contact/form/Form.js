@@ -15,13 +15,13 @@ const gambiara = data => axios.post(`${REACT_APP_BACKEND_URL}/email`, data);
 
 const myForm = props => {
   const handleChange = key => event => {
-    console.log(REACT_APP_BACKEND_URL);
+    console.log(props);
   };
 
   const handleSubmit = async event => {
     event.preventDefault();
     try {
-      const response = await gambiara(props);
+      const response = await props.onSubmitForm();
       console.log(response);
     } catch (e) {
       console.log(e);

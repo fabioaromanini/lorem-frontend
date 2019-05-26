@@ -1,10 +1,5 @@
 import { combineReducers } from 'redux';
-
-const contactForm = () => ({
-  email: 'Email do reducer',
-  name: 'name do reducer',
-  message: 'measasage do reahauideaedbdads'
-});
+import contactForm from './contactForm';
 
 export default combineReducers({
   contactForm
