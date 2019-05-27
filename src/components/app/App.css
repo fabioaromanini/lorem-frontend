@@ -8,6 +8,16 @@
   color: #c0c5ce;
 }
 
+.btn-flat-inverted {
+  background-color: #65737e;
+  color: #c0c5ce;
+}
+
+.btn-flat-inverted:enabled:hover {
+  background-color: #343d46;
+  color: #c0c5ce;
+}
+
 body {
   color: #343d46;
   background-color: #c0c5ce;
@@ -15,4 +25,9 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.Section-title {
+  text-align: center;
+  padding-top: 1em;
 }

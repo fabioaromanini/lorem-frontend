@@ -5,13 +5,21 @@ import arrow_down from './arrow_down.png';
 
 export default function Landing() {
   return (
-    <div className="Landing">
+    <div id="Landing" className="Landing">
       <header>
         <div className="Landing-hero">
-          <h1>lorem</h1>
+          <h1 id="Landing-hero-title">lorem</h1>
+          <p id="Landing-hero-subtitle">
+            Your favourite webapp for random text generation.
+          </p>
         </div>
       </header>
-      <a href="#contact">
+      <div id="Landing-info">
+        <ul>
+          <li>Choose between the maximum lenght in words or characters.</li>
+        </ul>
+      </div>
+      <a href="#TextGenerator">
         <img
           className="animated infinite flash slower"
           src={arrow_down}

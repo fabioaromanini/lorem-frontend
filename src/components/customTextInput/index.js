@@ -11,16 +11,21 @@ export default props => {
     placeholder,
     meta: { touched, error },
     label,
-    disabled
+    disabled,
+    inverted,
+    formName,
+    hideLabel
   } = props;
 
   return (
-    <Form.Group controlId={`Contact-${label}-input`}>
-      <Form.Label>{label}</Form.Label>
+    <Form.Group controlId={`${formName}-${label}-input`}>
+      <Form.Label style={{ display: hideLabel ? 'none' : 'inline-block' }}>
+        {label}
+      </Form.Label>
       <Form.Control
         type={type}
         placeholder={placeholder}
-        className="CustomTextInput"
+        className={inverted ? 'CustomTextInputInverted' : 'CustomTextInput'}
         as={as}
         {...input}
         disabled={disabled}

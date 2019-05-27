@@ -6,8 +6,8 @@ import './Contact.css';
 
 export default () => {
   return (
-    <div className="Contact" id="contact">
-      <h1>Contact</h1>
+    <div className="Contact" id="Contact">
+      <h1 className="Section-title">Contact</h1>
       <Form />
       <Footer />
     </div>

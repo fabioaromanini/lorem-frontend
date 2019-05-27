@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 
-import App from './App';
+import App from './index';
 
 const mockStore = configureMockStore();
 const store = mockStore({});
