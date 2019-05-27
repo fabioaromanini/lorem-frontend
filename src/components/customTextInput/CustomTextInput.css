@@ -1,0 +1,23 @@
+.CustomTextInput {
+  color: #343d46;
+  background-color: #c0c5ce;
+  border: none;
+}
+
+.CustomTextInput:hover {
+  color: #343d46;
+  background-color: #c0c5ce;
+  border: none;
+}
+
+.CustomTextInputInverted {
+  background-color: #65737e;
+  color: #c0c5ce;
+  border: none;
+}
+
+.CustomTextInputInverted:hover {
+  background-color: #65737e;
+  color: #c0c5ce;
+  border: none;
+}

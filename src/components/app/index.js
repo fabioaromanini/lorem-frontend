@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Landing from './landing';
-import Contact from './contact';
-import TextGenerator from './textGenerator';
+import Landing from '../landing';
+import Contact from '../contact';
+import TextGenerator from '../textGenerator';
 
 import './App.css';
 

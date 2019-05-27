@@ -7,8 +7,8 @@ import Container from 'react-bootstrap/Container';
 import Spinner from 'react-bootstrap/Spinner';
 import { Field } from 'redux-form';
 
-import CustomTextInput from './customTextInput';
-import { notEmpty } from './validations';
+import CustomTextInput from '../../customTextInput';
+import { notEmpty } from '../../customTextInput/validations';
 import './Form.css';
 
 export default props => {
@@ -24,6 +24,7 @@ export default props => {
               label="Email"
               component={CustomTextInput}
               disabled={submitSucceeded}
+              formName="Contact"
               type="text"
             />
           </Col>
@@ -33,6 +34,7 @@ export default props => {
               label="Name"
               disabled={submitSucceeded}
               component={CustomTextInput}
+              formName="Contact"
               type="text"
             />
           </Col>
@@ -44,6 +46,7 @@ export default props => {
               label="Message *"
               component={CustomTextInput}
               as="textarea"
+              formName="Contact"
               disabled={submitSucceeded}
               validate={notEmpty}
             />

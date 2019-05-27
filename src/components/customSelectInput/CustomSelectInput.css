@@ -1,0 +1,23 @@
+.CustomSelectInput {
+  color: #343d46;
+  background-color: #c0c5ce;
+  border: none;
+}
+
+.CustomSelectInput:hover {
+  color: #343d46;
+  background-color: #c0c5ce;
+  border: none;
+}
+
+.CustomSelectInputInverted {
+  background-color: #65737e;
+  color: #c0c5ce;
+  border: none;
+}
+
+.CustomSelectInputInverted:hover {
+  background-color: #65737e;
+  color: #c0c5ce;
+  border: none;
+}

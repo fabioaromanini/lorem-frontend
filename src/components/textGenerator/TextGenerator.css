@@ -3,15 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 #TextGenerator-output {
-  margin: 5vw;
-  width: 80vw;
-  min-height: 70vh;
   background-color: #65737e;
   color: #c0c5ce;
-  border-radius: 6px;
+
+  margin: 2vh;
+  min-height: 70vh;
+  width: 100%;
   padding: 1em;
+
+  border-radius: 6px;
   border: none;
 }
