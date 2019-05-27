@@ -1,3 +1,17 @@
-.TextGenerator {
+#TextGenerator {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#TextGenerator-output {
+  margin: 5vw;
+  width: 80vw;
+  min-height: 70vh;
+  background-color: #65737e;
+  color: #c0c5ce;
+  border-radius: 6px;
+  padding: 1em;
+  border: none;
 }
