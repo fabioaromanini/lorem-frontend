@@ -12,6 +12,6 @@ const reduxFormWrapper = reduxForm({
 
 const WrappedForm = reduxFormWrapper(OptionsForm);
 
-export default () => {
-  return <WrappedForm onSubmit={data => console.log(data)} />;
+export default props => {
+  return <WrappedForm onSubmit={props.onSubmit} />;
 };
