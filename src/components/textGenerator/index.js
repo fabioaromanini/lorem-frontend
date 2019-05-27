@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
 import Options from './options';
 import mockText from './mocktext';
@@ -12,7 +13,8 @@ class TextGenerator extends React.Component {
     this.state = {
       text: '',
       originalText: mockText,
-      words: mockText.split(' ')
+      words: mockText.split(' '),
+      buttonMessage: 'Copy to clipboard'
     };
   }
 
@@ -40,7 +42,15 @@ class TextGenerator extends React.Component {
       newText = `${newText}.`;
     }
 
-    this.setState({ text: newText });
+    this.setState({ text: newText, buttonMessage: 'Copy to clipboard' });
+  };
+
+  copyToClipboard = () => {
+    const output = document.getElementById('TextGenerator-output');
+    output.select();
+    document.execCommand('copy');
+    document.getSelection().removeAllRanges();
+    this.setState({ buttonMessage: 'Copied!' });
   };
 
   render() {
@@ -48,7 +58,10 @@ class TextGenerator extends React.Component {
       <Container id="TextGenerator">
         <h1 className="Section-title">Generate text</h1>
         <Options onSubmit={this.modifyText} />
-        <textarea id="TextGenerator-output" value={this.state.text} disabled />
+        <textarea readOnly id="TextGenerator-output" value={this.state.text} />
+        <Button variant="flat-inverted" onClick={this.copyToClipboard}>
+          {this.state.buttonMessage}
+        </Button>
       </Container>
     );
   }

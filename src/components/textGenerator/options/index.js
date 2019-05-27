@@ -6,7 +6,8 @@ import OptionsForm from './OptionsForm';
 const reduxFormWrapper = reduxForm({
   form: 'options',
   initialValues: {
-    unity: 'words'
+    unity: 'words',
+    quantity: 20
   }
 });
 
