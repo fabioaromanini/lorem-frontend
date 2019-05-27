@@ -8,7 +8,7 @@ import { Field } from 'redux-form';
 
 import CustomTextInput from '../../customTextInput';
 import CustomSelectInput from '../../customSelectInput';
-import { notEmpty } from '../../customTextInput/validations';
+import { notEmpty, greaterThanZero } from '../../customTextInput/validations';
 
 export default props => {
   const { handleSubmit, submitting } = props;
@@ -29,7 +29,7 @@ export default props => {
             inverted
             formName="TextGeneratorOptions"
             hideLabel
-            validate={notEmpty}
+            validate={[notEmpty, greaterThanZero]}
           />
         </Col>
         <Col xs={4}>
