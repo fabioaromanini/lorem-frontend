@@ -16,3 +16,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.Section-title {
+  text-align: center;
+  padding-top: 1.5em;
+}

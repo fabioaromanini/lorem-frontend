@@ -5,7 +5,7 @@ import arrow_down from './arrow_down.png';
 
 export default function Landing() {
   return (
-    <div className="Landing">
+    <div id="Landing" className="Landing">
       <header>
         <div className="Landing-hero">
           <h1 id="Landing-hero-title">lorem</h1>
@@ -17,7 +17,7 @@ export default function Landing() {
       <ul style={{ maxWidth: '60vw' }}>
         <li>Choose between the maximum lenght in words or characters.</li>
       </ul>
-      <a href="#contact">
+      <a href="#TextGenerator">
         <img
           className="animated infinite flash slower"
           src={arrow_down}
