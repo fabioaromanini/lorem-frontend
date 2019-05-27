@@ -14,9 +14,11 @@ export default function Landing() {
           </p>
         </div>
       </header>
-      <ul style={{ maxWidth: '60vw' }}>
-        <li>Choose between the maximum lenght in words or characters.</li>
-      </ul>
+      <div id="Landing-info">
+        <ul>
+          <li>Choose between the maximum lenght in words or characters.</li>
+        </ul>
+      </div>
       <a href="#TextGenerator">
         <img
           className="animated infinite flash slower"

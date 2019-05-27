@@ -19,11 +19,25 @@
 }
 
 #Landing-hero-subtitle {
-  font-size: 2em;
-  max-width: 70vw;
+  font-size: 1.5em;
+  max-width: 90vw;
 }
 
 #Landing-hero-title {
   font-size: 9em;
   font-weight: 100;
+}
+
+#Landing-info {
+  max-width: 80vw;
+}
+
+@media only screen and (min-width: 768px) {
+  #Landing-hero-subtitle {
+    font-size: 2em;
+  }
+
+  #Landing-hero-title {
+    font-size: 15em;
+  }
 }
