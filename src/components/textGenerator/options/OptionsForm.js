@@ -8,10 +8,20 @@ import { Field } from 'redux-form';
 
 import CustomTextInput from '../../customTextInput';
 import CustomSelectInput from '../../customSelectInput';
-import { notEmpty, greaterThanZero } from '../../customTextInput/validations';
+import {
+  notEmpty,
+  greaterThanZero,
+  max473
+} from '../../customTextInput/validations';
 
 export default props => {
-  const { handleSubmit, submitting } = props;
+  const { handleSubmit, submitting, unity } = props;
+
+  const quantityValidations = [notEmpty, greaterThanZero];
+  if (unity === 'words') {
+    quantityValidations.push(max473);
+  }
+
   return (
     <Form onSubmit={handleSubmit}>
       <Row
@@ -29,7 +39,7 @@ export default props => {
             inverted
             formName="TextGeneratorOptions"
             hideLabel
-            validate={[notEmpty, greaterThanZero]}
+            validate={quantityValidations}
           />
         </Col>
         <Col xs={4}>
