@@ -18,9 +18,6 @@ export default function Landing() {
         <ul>
           <li>Choose between the maximum lenght in words or characters.</li>
         </ul>
-        <ul>
-          <li>Get the text via email or simply copy it to your clipboard.</li>
-        </ul>
       </div>
       <a href="#TextGenerator">
         <img
