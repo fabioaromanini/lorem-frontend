@@ -10,13 +10,16 @@ export default function Landing() {
         <div className="Landing-hero">
           <h1 id="Landing-hero-title">lorem</h1>
           <p id="Landing-hero-subtitle">
-            Your favourite webapp for random text generation.
+            Your favourite webapp for lorem text generation.
           </p>
         </div>
       </header>
       <div id="Landing-info">
         <ul>
           <li>Choose between the maximum lenght in words or characters.</li>
+        </ul>
+        <ul>
+          <li>Get the text via email or simply copy it to your clipboard.</li>
         </ul>
       </div>
       <a href="#TextGenerator">
