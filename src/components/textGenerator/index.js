@@ -23,23 +23,18 @@ class TextGenerator extends React.Component {
     const { quantity, unity } = values;
 
     if (unity === 'chars') {
-      if (this.state.originalText[quantity] === '.') {
-        newText = this.state.originalText.substr(0, quantity);
-      } else {
-        newText = `${this.state.originalText.substr(0, quantity - 1)}.`;
-      }
+      newText = this.state.originalText.substr(0, quantity);
     } else {
       const words = this.state.words.slice(0, quantity);
       newText = words.join(' ');
-    }
+      if (newText.endsWith(',')) {
+        newText = newText.substr(0, newText.length - 1);
+        newText = `${newText}.`;
+      }
 
-    if (newText.endsWith(',')) {
-      newText = newText.substr(0, newText.length - 1);
-      newText = `${newText}.`;
-    }
-
-    if (!newText.endsWith('.')) {
-      newText = `${newText}.`;
+      if (!newText.endsWith('.')) {
+        newText = `${newText}.`;
+      }
     }
 
     this.setState({ text: newText, buttonMessage: 'Copy to clipboard' });

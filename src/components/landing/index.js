@@ -10,7 +10,7 @@ export default function Landing() {
         <div className="Landing-hero">
           <h1 id="Landing-hero-title">lorem</h1>
           <p id="Landing-hero-subtitle">
-            Your favourite webapp for random text generation.
+            Your favourite webapp for lorem text generation.
           </p>
         </div>
       </header>
