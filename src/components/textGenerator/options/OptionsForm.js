@@ -11,7 +11,8 @@ import CustomSelectInput from '../../customSelectInput';
 import {
   notEmpty,
   greaterThanZero,
-  max473
+  max473,
+  max3223
 } from '../../customTextInput/validations';
 
 export default props => {
@@ -20,6 +21,8 @@ export default props => {
   const quantityValidations = [notEmpty, greaterThanZero];
   if (unity === 'words') {
     quantityValidations.push(max473);
+  } else {
+    quantityValidations.push(max3223);
   }
 
   return (
